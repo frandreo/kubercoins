@@ -4,6 +4,7 @@ metadata:
   name: "ns-chart"
   labels:
 {{- include "ns-chart.labels" . | nindent 4 }}
+    app: my-app
 spec:
   ports:
     - port: {{ .Values.service.port }}
